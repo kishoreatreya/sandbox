@@ -1,0 +1,11 @@
+digraph G {
+    kishore;
+    atreya;
+   
+    "0x12345677899"
+    "0xabcdef"
+    kishore -> atreya;
+    atreya -> "0x12345677899"
+
+    "0x12345677899" -> "0xabcdef"
+}

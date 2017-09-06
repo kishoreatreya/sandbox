@@ -1,0 +1,4 @@
+foo/bar/baz.txt
+foo/bar
+foo/dude/damn.txt
+foo/dude

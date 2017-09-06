@@ -1,0 +1,20 @@
+SE Table Mapper
+
+Entities:
+
+- Profile: High level container of desired tables and features
+	- Dictionary of Feature Groups
+	- Dictionary of Mutual Groups
+	- Dictionary of Features
+	- Dictionary of Tile Groups
+	
+
+- Feature: 
+
+- Tile Group: Container of Tile Pool objects, plus it contains "static" info like number of pools, and number of tiles/pool
+	* We need a way to build this object
+	* Implement builder or Factory Method
+
+- Feature Group: -> a collection of features and can be treated as mutually exclusive to each other, but doesn't have to be
+
+

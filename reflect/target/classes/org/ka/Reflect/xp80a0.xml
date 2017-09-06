@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+    <kf>
+        <muxCloud>
+            <mux>
+                <lutSize value="64"/>
+                <numOfMuxes value="6"/>
+            </mux>
+            <numOfStages value="2"/>
+            <numOfMuxLuts array="yes" value="32, 28"/>
+            <numOfBypassMuxes array="yes" value="32, 0"/>
+            <numOfMuxXors value="0"/>
+            <muxXorWidth value="0"/>
+        </muxCloud>
+
+        <it>
+            <numOfClusters value="2"/>
+            <blocksPerCluster array="yes" value="6, 1"/>
+            <blockDepths array="yes" value="16, 16"/>
+            <addrBitsPerBlock array="yes" value="4, 4"/>
+            <blockWidths array="yes" value="4, 2"/>
+            <firstBlockIds array="yes" value="0, 6"/>
+            <blockIdToClusterId array="yes" value="0, 0, 0, 0, 0, 0, 1"/>
+            <isClusterDynamic array="yes" value="true, false"/>
+        </it>
+    </kf>
+
+    <of>
+        <muxCloud>
+            <mux>
+                <lutSize value="64"/>
+                <numOfMuxes value="6"/>
+            </mux>
+            <numOfStages value="4"/>
+            <numOfMuxLuts array="yes" value="32, 32, 32, 48"/>
+            <numOfBypassMuxes array="yes" value="32, 32, 32, 0"/>
+            <numOfMuxXors value="8"/>
+            <muxXorWidth value="16"/>
+        </muxCloud>
+
+        <it>
+            <numOfClusters value="9"/>
+            <blocksPerCluster array="yes" value="1, 1, 1, 1, 1, 1, 2, 1, 1"/>
+            <blockDepths array="yes" value="32, 32, 32, 32, 32, 32, 32, 16, 16"/>
+            <addrBitsPerBlock array="yes" value="5, 5, 5, 5, 5, 5, 5, 4, 4"/>
+            <blockWidths array="yes" value="8, 4, 1, 6, 10, 8, 4, 8, 9"/>
+            <firstBlockIds array="yes" value="0, 1, 2, 3, 4, 5, 6, 8, 9"/>
+            <blockIdToClusterId array="yes" value="0, 1, 2, 3, 4, 5, 6, 6, 7, 8"/>
+            <isClusterDynamic array="yes" value="false, false, false, false, false, false, true, false, false"/>
+        </it>
+    </of>
+</device>

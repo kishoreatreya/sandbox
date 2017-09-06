@@ -1,0 +1,6 @@
+Use these commands to build and link
+
+g++ -c foo.c
+
+g++ main.cpp foo.o -o out
+
