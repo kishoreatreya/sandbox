@@ -75,6 +75,7 @@ $(BIN) : $(OBJS)
 clean : 
 	$(RM) -f src/*.o src/*.d $(BIN) 
 	$(RM) -rf src/*.dSYM
+	$(RM) -rf dist
 
 .PHONY : cscope
 cscope :
