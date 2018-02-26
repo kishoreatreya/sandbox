@@ -76,16 +76,16 @@ OBJSDIR := objs
 ###############################################################################
 ifeq ($(UNAME),Darwin)
 define PROFILE_MAKE_SHARED_LIB =
-	$(CXX) -fPIC $(filter %.o, %^) ${LDFLAGS} -shared -o $@
+	$(CXX) -fPIC $(filter %.o, $^) ${LDFLAGS} -shared -o $@
 endef
 else
 define PROFILE_MAKE_SHARED_LIB =
-	$(CXX) -fPIC -rdynamic $(filter %.o, %^) ${LDFLAGS} -shared -o $@
+	$(CXX) -fPIC -rdynamic $(filter %.o, $^) ${LDFLAGS} -shared -o $@
 endef
 endif
 define PROFILE_MAKE_STATIC_LIB =
 	$(RM) -f $@
-	$(AR) $(ARFLAGS) $@ $(filter %.0, $^)
+	$(AR) $(ARFLAGS) $@ $(filter %.o, $^)
 endef
 
 ###############################################################################
@@ -110,7 +110,7 @@ endif
 # Objects Variable
 #
 ###############################################################################
-OBJS := $(foreach src, $(SRCS),$(OBJSDIR)/$(basename $(src)).o) 
+OBJS := $(foreach src, $(PROFILE_SRCS),$(OBJSDIR)/$(basename $(src)).o) 
 
 ###############################################################################
 #
@@ -164,7 +164,7 @@ $(XP_LIB).so : $(OBJS) $(DIST)
 	@$(ECHO) Building $(XP_LIB).so
 	@$(ECHO)
 	@$(ECHO) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	$(CXX) -fPIC $(filter %.o, $^) ${LDFLAGS} -shared -o $@
+	$(PROFILE_MAKE_SHARED_LIB)
 
 $(XP_LIB).a : $(OBJS) $(DIST)
 	@$(ECHO)
@@ -173,8 +173,7 @@ $(XP_LIB).a : $(OBJS) $(DIST)
 	@$(ECHO) Building $(XP_LIB).a
 	@$(ECHO)
 	@$(ECHO) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	@$(RM) -f $@
-	$(AR) $(ARFLAGS) $@ $(filter %.o, $^)
+	$(PROFILE_MAKE_STATIC_LIB)
 
 .PRECIOUS : $(OBJSDIR)/*.o
 $(OBJSDIR)/%.o : %.cpp $(OBJSDIR) $(MAKEFILE_LIST) 
