@@ -93,12 +93,12 @@ XP_PRFX := libXdk$(XP_DEV)
 # 		ex: [bash-4.2]# pwd
 # 			/home/eng/xp-profiles/default/
 # 			[bash-4.2]# echo $XP_DEV
-# 			XP80
+# 			Xp80
 #
 # 			The 'default' will be scraped and used in the library name
 # 			generation. The libraries will be called:
 #
-# 			libXdk_XP80_Default.so and libXdk_XP80_Default.a
+# 			libXdkXp80Default.so and libXdkXp80Default.a
 #
 ###############################################################################
 XP_LIBNAME :=
