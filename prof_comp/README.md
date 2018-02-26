@@ -4,7 +4,7 @@ This directory provides a template directory structure that can be used to build
 
 ## Getting Started
 
-####Included files:
+###Included files:
 * Makefile
 * profile.mk
 * srcs.mk
@@ -12,7 +12,7 @@ This directory provides a template directory structure that can be used to build
 * to\_upper.sh
 * README.md
 
-####Directory Structure:
+###Directory Structure:
 * src
     * entries
         * include
