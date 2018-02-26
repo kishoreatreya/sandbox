@@ -33,16 +33,16 @@ XDK_PATH := xdk
 # Device type variable. Can be changed either via command line or using an
 # environment variable. Can also be updated here and checked in
 #
-# export XP_DEV=XP80 or export XP_DEV=XP100
+# export XP_DEV=Xp80 or export XP_DEV=Xp100
 # 
 # or
 # 
-# make XP_DEV=XP70 
+# make XP_DEV=Xp70 
 #
-# Default is XP100
+# Default is Xp100
 #
 ###############################################################################
-XP_DEV := XP100
+XP_DEV := Xp100
 
 
 ###############################################################################
@@ -74,7 +74,7 @@ XP_LIB_PATH := ./dist
 # 		the name of the library, and the prefix will be ignored
 #
 ###############################################################################
-XP_PRFX := libXdk_$(XP_DEV)_
+XP_PRFX := libXdk$(XP_DEV)
 
 ###############################################################################
 #
