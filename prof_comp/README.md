@@ -4,7 +4,7 @@ This directory provides a template directory structure that can be used to build
 
 ## Getting Started
 
-###Included files
+### Included files
 
 * Makefile
 * profile.mk
@@ -13,7 +13,7 @@ This directory provides a template directory structure that can be used to build
 * to\_upper.sh
 * README.md
 
-###Directory Structure
+### Directory Structure
 
 * src
     * entries
@@ -34,7 +34,7 @@ This directory provides a template directory structure that can be used to build
         * acm
             * include
     * pipeline-builders
-            * include
+        * include
     
 After using the code generators provided as a part of the xdk
     - XPC 12.x or newer
