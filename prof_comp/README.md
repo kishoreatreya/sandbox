@@ -76,7 +76,7 @@ Other variables include:
     
 * **XP\_PRFX**
     - Variable used to configure the libname prefix. Default is libXdk$(XP\_DEV)
-        ex: libXdk<libname>
+        ex: libXdk\<libname\>
     
 * **XP\_LIBNAME**
     - Variable used to explicitly set the full library name for this profile
@@ -90,17 +90,17 @@ Additionally, there is a variable **XDK\_INC\_PATHS** which is prefilled with in
 
 Any of the variables defined in _profile.mk_ can be defined at the command line when invoking 'make'
 
-EX: This will set the device type to XP80 and the install location to /usr/local/lib64
+EX: This will set the device type to Xp80 and the install location to /usr/local/lib64
 
 ```
-make XP\_DEV=XP80 XP\_LIB\_PATH=/usr/local/lib64
+make XP_DEV=Xp80 XP_LIB_PATH=/usr/local/lib64
 make install
 ```
 
 EX: This will set the libname to libXdkFoobar
 
 ```
-make XP\_LIBNAME=libXdkFoobar
+make XP_LIBNAME=libXdkFoobar
 make install
 ```
 
