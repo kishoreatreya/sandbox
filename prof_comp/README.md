@@ -4,35 +4,35 @@ This directory provides a template directory structure that can be used to build
 
 ## Getting Started
 
-Included files:
-    * Makefile
-    * profile.mk
-    * srcs.mk
-    * includes.mk
-    * to\_upper.sh
-    * README.md
+####Included files:
+* Makefile
+* profile.mk
+* srcs.mk
+* includes.mk
+* to\_upper.sh
+* README.md
 
-Directory Structure:
-    * src
-        * entries
+####Directory Structure:
+* src
+    * entries
+        * include
+    * packers
+        * include
+    * profiles
+        * lde
             * include
-        * packers
+        * parser
             * include
-        * profiles
-            * lde
-                * include
-            * parser
-                * include
-            * hdr
-                * include
-            * table
-                * include
-            * range
-                * include
-            * acm
-                * include
-        * pipeline-builders
-                * include
+        * hdr
+            * include
+        * table
+            * include
+        * range
+            * include
+        * acm
+            * include
+    * pipeline-builders
+            * include
     
 After using the code generators provided as a part of the xdk
     - XPC 12.x or newer
