@@ -179,7 +179,7 @@ $(XP_LIB).a : $(OBJS) $(DIST)
 .PRECIOUS : $(OBJSDIR)/*.o
 $(OBJSDIR)/%.o : %.cpp $(OBJSDIR) $(MAKEFILE_LIST) 
 	@$(MKDIR) -p $(dir $@)
-	$(CXX) $(XDK_INC_PATH) $(PROFILE_INCLUDES) $(CXXFLAGS) -c $< \
+	$(CXX) $(XDK_INC_PATHS) $(PROFILE_INCLUDES) $(CXXFLAGS) -c $< \
 	-o $@
 
 .PHONY : clean
